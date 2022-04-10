@@ -1,0 +1,15 @@
+--PROBLEMA:
+--2603 - Endereço dos Clientes
+--RESPOSTA:
+--Accepted
+--IDIOMA:
+--PostgreSQL (psql 9.4.19)
+--TEMPO:
+--0.002s
+--TAMANHO:
+--71 Bytes
+--MEMÓRIA:
+---
+--SUBMISSÃO:
+--06/09/2021 14:14:14
+SELECT c.name, c.street FROM customers c WHERE c.city = 'Porto Alegre';

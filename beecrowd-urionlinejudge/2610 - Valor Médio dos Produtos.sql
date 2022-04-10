@@ -1,0 +1,15 @@
+--PROBLEMA:
+--2610 - Valor Médio dos Produtos
+--RESPOSTA:
+--Accepted
+--IDIOMA:
+--PostgreSQL (psql 9.4.19)
+--TEMPO:
+--0.003s
+--TAMANHO:
+--46 Bytes
+--MEMÓRIA:
+---
+--SUBMISSÃO:
+--06/09/2021 14:49:21
+SELECT trunc(avg(p.price),2) FROM products p; 

@@ -1,0 +1,15 @@
+-- PROBLEMA:
+--2607 - Cidades em Ordem Alfabética
+--RESPOSTA:
+--Accepted
+--IDIOMA:
+--PostgreSQL (psql 9.4.19)
+--TEMPO:
+--0.003s
+--TAMANHO:
+--57 Bytes
+--MEMÓRIA:
+---
+--SUBMISSÃO:
+--06/09/2021 14:29:15
+ SELECT DISTINCT p.city FROM providers p ORDER BY p.city;

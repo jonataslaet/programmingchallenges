@@ -1,0 +1,14 @@
+--2602 - Select Básico
+--RESPOSTA:
+--Accepted
+--IDIOMA:
+--PostgreSQL (psql 9.4.19)
+--TEMPO:
+--0.003s
+--TAMANHO:
+--50 Bytes
+--MEMÓRIA:
+---
+--SUBMISSÃO:
+--29/08/2021 21:22:06
+select name from customers c where c.state = 'RS';
