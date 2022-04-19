@@ -9,7 +9,7 @@ Cada branch corresponderá a um site, que por sua vez conterá suas respectivas 
 https://www.beecrowd.com.br/
 ### Codeforces (17 problemas resolvidos)
 https://codeforces.com/
-### Leetcode (22 problemas resolvidos)
+### Leetcode (24 problemas resolvidos)
 https://leetcode.com/
 ### Hackerrank (13 problemas resolvidos)
 https://www.hackerrank.com/
