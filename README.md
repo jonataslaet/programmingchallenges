@@ -11,7 +11,7 @@ https://www.beecrowd.com.br/
 https://codeforces.com/
 ### Leetcode (24 problemas resolvidos)
 https://leetcode.com/
-### Hackerrank (30 problemas resolvidos)
+### Hackerrank (32 problemas resolvidos)
 https://www.hackerrank.com/
 ### SPOJ Brasil (66 problemas resolvidos)
 https://br.spoj.com/
