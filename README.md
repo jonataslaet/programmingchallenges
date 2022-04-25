@@ -5,7 +5,7 @@ Aqui estarão as soluções aceitas dos problemas contidos em sites de desafios 
 
 ## Sites listados
 Cada branch corresponderá a um site, que por sua vez conterá suas respectivas soluções aceitas em um diretório com seu nome. Todo fim de semana o branch main será atualizado com alguma solução enviada para algum branch de algum site listado a seguir.
-### Beecrowd (386 problemas resolvidos)
+### Beecrowd (387 problemas resolvidos)
 https://www.beecrowd.com.br/
 ### Codeforces (17 problemas resolvidos)
 https://codeforces.com/
