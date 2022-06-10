@@ -1,4 +1,4 @@
-package com.github.jonataslaet.programmingchallenges.datastructures;
+package main.com.github.jonataslaet.programmingchallenges.datastructures;
 
 public class Node {
 	

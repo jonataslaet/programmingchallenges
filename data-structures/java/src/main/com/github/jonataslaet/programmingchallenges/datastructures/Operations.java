@@ -1,4 +1,5 @@
-package com.github.jonataslaet.programmingchallenges.datastructures;
+package main.com.github.jonataslaet.programmingchallenges.datastructures;
+
 
 public interface Operations {
 	//Add a certain node at the end of the list
