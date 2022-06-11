@@ -36,7 +36,7 @@ public class TestVector {
 		vector.add(0, n2);
 		vector.add(1, n3);
 		
-		Assertions.assertFalse(vector.contains(n1));
+		Assertions.assertTrue(vector.contains(n1));
 		Assertions.assertEquals("Value Of Node 2", vector.get(0).getValue());
 		Assertions.assertEquals("Value Of Node 3", vector.get(1).getValue());
 		
@@ -101,9 +101,10 @@ public class TestVector {
 		vector.add(n1);
 		vector.add(n2);
 		
-		Node expectedNode = vector.get(0);
-		Assertions.assertTrue(vector.contains(expectedNode));
+		Assertions.assertTrue(vector.contains(vector.get(0)));
+		Assertions.assertEquals("Value Of Node 1", vector.get(0).getValue());
 		vector.remove(0);
-		Assertions.assertFalse(vector.contains(expectedNode));
+		Assertions.assertTrue(vector.contains(vector.get(0)));
+		Assertions.assertEquals("Value Of Node 2", vector.get(0).getValue());
 	}
 }
