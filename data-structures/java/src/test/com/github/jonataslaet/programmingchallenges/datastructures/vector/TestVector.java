@@ -18,8 +18,8 @@ public class TestVector {
 		vector.add(n1);
 		vector.add(n2);
 
-		Assertions.assertTrue(vector.get(0).getValue().equals(n1.getValue()));
-		Assertions.assertTrue(vector.get(1).getValue().equals(n2.getValue()));
+		Assertions.assertTrue(((Node) vector.get(0)).getValue().equals(n1.getValue()));
+		Assertions.assertTrue(((Node) vector.get(1)).getValue().equals(n2.getValue()));
 	}
 	
 	@Test
@@ -37,8 +37,8 @@ public class TestVector {
 		vector.add(1, n3);
 		
 		Assertions.assertTrue(vector.contains(n1));
-		Assertions.assertEquals("Value Of Node 2", vector.get(0).getValue());
-		Assertions.assertEquals("Value Of Node 3", vector.get(1).getValue());
+		Assertions.assertEquals("Value Of Node 2", ((Node) vector.get(0)).getValue());
+		Assertions.assertEquals("Value Of Node 3", ((Node) vector.get(1)).getValue());
 		
 	}
 	
@@ -52,8 +52,8 @@ public class TestVector {
 		vector.add(n1);
 		vector.add(n2);
 
-		Node getN1 = vector.get(0);
-		Node getN2 = vector.get(1);
+		Node getN1 = (Node) vector.get(0);
+		Node getN2 = (Node) vector.get(1);
 
 		Assertions.assertNotNull(getN1);
 		Assertions.assertNotNull(getN2);
@@ -102,9 +102,9 @@ public class TestVector {
 		vector.add(n2);
 		
 		Assertions.assertTrue(vector.contains(vector.get(0)));
-		Assertions.assertEquals("Value Of Node 1", vector.get(0).getValue());
+		Assertions.assertEquals("Value Of Node 1", ((Node) vector.get(0)).getValue());
 		vector.remove(0);
 		Assertions.assertTrue(vector.contains(vector.get(0)));
-		Assertions.assertEquals("Value Of Node 2", vector.get(0).getValue());
+		Assertions.assertEquals("Value Of Node 2", ((Node) vector.get(0)).getValue());
 	}
 }
