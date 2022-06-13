@@ -14,12 +14,12 @@ public class TestVector {
 		Node n1 = new Node(null, "Value Of Node 1");
 		Node n2 = new Node(null, "Value Of Node 2");
 
-		Vector vector = new Vector();
+		Vector<Node> vector = new Vector<Node>();
 		vector.add(n1);
 		vector.add(n2);
 
-		Assertions.assertTrue(((Node) vector.get(0)).getValue().equals(n1.getValue()));
-		Assertions.assertTrue(((Node) vector.get(1)).getValue().equals(n2.getValue()));
+		Assertions.assertTrue(vector.get(0).getValue().equals(n1.getValue()));
+		Assertions.assertTrue(vector.get(1).getValue().equals(n2.getValue()));
 	}
 	
 	@Test
@@ -28,7 +28,7 @@ public class TestVector {
 		Node n2 = new Node(null, "Value Of Node 2");
 		Node n3 = new Node(null, "Value Of Node 3");
 		
-		Vector vector = new Vector();
+		Vector<Node> vector = new Vector<Node>();
 		vector.add(n1);
 		
 		Assertions.assertTrue(vector.contains(n1));
@@ -37,8 +37,8 @@ public class TestVector {
 		vector.add(1, n3);
 		
 		Assertions.assertTrue(vector.contains(n1));
-		Assertions.assertEquals("Value Of Node 2", ((Node) vector.get(0)).getValue());
-		Assertions.assertEquals("Value Of Node 3", ((Node) vector.get(1)).getValue());
+		Assertions.assertEquals("Value Of Node 2", vector.get(0).getValue());
+		Assertions.assertEquals("Value Of Node 3", vector.get(1).getValue());
 		
 	}
 	
@@ -48,7 +48,7 @@ public class TestVector {
 		Node n1 = new Node(null, "Value Of Node 1");
 		Node n2 = new Node(null, "Value Of Node 2");
 
-		Vector vector = new Vector();
+		Vector<Node> vector = new Vector<Node>();
 		vector.add(n1);
 		vector.add(n2);
 
@@ -67,7 +67,7 @@ public class TestVector {
 		Node n1 = new Node(null, "Value Of Node 1");
 		Node n2 = new Node(null, "Value Of Node 2");
 
-		Vector vector = new Vector();
+		Vector<Node> vector = new Vector<Node>();
 		vector.add(n1);
 		vector.add(n2);
 		
@@ -82,7 +82,7 @@ public class TestVector {
 		Node n2 = new Node(null, "Value Of Node 2");
 		Node n3 = new Node(null, "Value Of Node 3");
 		
-		Vector vector = new Vector();
+		Vector<Node> vector = new Vector<Node>();
 		vector.add(n1);
 		vector.add(n2);
 
@@ -97,14 +97,14 @@ public class TestVector {
 		Node n1 = new Node(null, "Value Of Node 1");
 		Node n2 = new Node(null, "Value Of Node 2");
 		
-		Vector vector = new Vector();
+		Vector<Node> vector = new Vector<Node>();
 		vector.add(n1);
 		vector.add(n2);
 		
 		Assertions.assertTrue(vector.contains(vector.get(0)));
-		Assertions.assertEquals("Value Of Node 1", ((Node) vector.get(0)).getValue());
+		Assertions.assertEquals("Value Of Node 1", vector.get(0).getValue());
 		vector.remove(0);
 		Assertions.assertTrue(vector.contains(vector.get(0)));
-		Assertions.assertEquals("Value Of Node 2", ((Node) vector.get(0)).getValue());
+		Assertions.assertEquals("Value Of Node 2", vector.get(0).getValue());
 	}
 }
