@@ -96,16 +96,24 @@ public class TestLinkedList {
 	void testRemoveFromPosition() {
 		Node n1 = new Node(null, "Value Of Node 1");
 		Node n2 = new Node(null, "Value Of Node 2");
+		Node n3 = new Node(null, "Value Of Node 3");
 		
 		LinkedList<Node> linkedList = new LinkedList<Node>();
 		linkedList.add(n1);
 		linkedList.add(n2);
+		linkedList.add(n3);
 		
-		Assertions.assertTrue(linkedList.contains(linkedList.get(0)));
-		Assertions.assertEquals("Value Of Node 1", linkedList.get(0).getValue());
-		linkedList.remove(0);
-		Assertions.assertTrue(linkedList.contains(linkedList.get(0)));
-		Assertions.assertEquals("Value Of Node 2", linkedList.get(0).getValue());
+		Assertions.assertTrue(3 == linkedList.size());
+		Assertions.assertTrue(linkedList.contains(n2));
+		Assertions.assertEquals(n1.getValue(), linkedList.get(0).getValue());
+		Assertions.assertEquals(n2.getValue(), linkedList.get(1).getValue());
+		Assertions.assertEquals(n3.getValue(), linkedList.get(2).getValue());
+		linkedList.remove(1);
+		Assertions.assertTrue(2 == linkedList.size());
+		Assertions.assertFalse(linkedList.contains(n2));
+		Assertions.assertEquals(n1.getValue(), linkedList.get(0).getValue());
+		Assertions.assertNotEquals(n2.getValue(), linkedList.get(1).getValue());
+		Assertions.assertEquals(n3.getValue(), linkedList.get(1).getValue());
 	}
 	
 	@Test
