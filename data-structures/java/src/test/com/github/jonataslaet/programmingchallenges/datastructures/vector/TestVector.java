@@ -1,4 +1,4 @@
-package test.com.github.jonataslaet.programmingchallenges.datastructures.vector;
+package com.github.jonataslaet.programmingchallenges.datastructures.vector;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -52,8 +52,8 @@ public class TestVector {
 		vector.add(n1);
 		vector.add(n2);
 
-		Node getN1 = (Node) vector.get(0);
-		Node getN2 = (Node) vector.get(1);
+		Node getN1 = vector.get(0);
+		Node getN2 = vector.get(1);
 
 		Assertions.assertNotNull(getN1);
 		Assertions.assertNotNull(getN2);

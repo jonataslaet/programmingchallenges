@@ -76,9 +76,7 @@ public class Vector<T> implements Operations<T> {
 	private void guaranteeSpace() {
 		if (this.quantityOfObjects == this.objects.length) {
 			T[] newObjects = (T[]) new Object[2 * this.quantityOfObjects];
-			for (int i = 0; i < newObjects.length; i++) {
-				newObjects[i] = this.objects[i];
-			}
+			System.arraycopy(this.objects, 0, newObjects, 0, newObjects.length);
 			this.objects = newObjects;
 		}
 	}
