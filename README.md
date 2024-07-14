@@ -1,17 +1,22 @@
 # Programming Challenges
 
-## Introdução
-Aqui estarão as soluções aceitas dos problemas contidos em sites de desafios de programação listados. 
+## Introduction
+Here you will find the accepted solutions to the problems contained in the listed programming challenge sites.
 
-## Sites listados
-Cada branch corresponderá a um site, que por sua vez conterá suas respectivas soluções aceitas em um diretório com seu nome. Todo fim de semana o branch main será atualizado com alguma solução enviada para algum branch de algum site listado a seguir.
-### Beecrowd (426 problemas resolvidos)
+## Listed sites
+Each branch will correspond to a site, which in turn will contain its respective accepted solutions in a directory with its name. Every weekend the main branch will be updated with a solution sent to a branch of one of the sites listed below.
+
+### Beecrowd (426 solved problems)
 https://www.beecrowd.com.br/
-### Codeforces (17 problemas resolvidos)
+
+### Codeforces (17 solved problems)
 https://codeforces.com/
-### Leetcode (24 problemas resolvidos)
+
+### Leetcode (24 solved problems)
 https://leetcode.com/
-### Hackerrank (32 problemas resolvidos)
+
+### Hackerrank (32 solved problems)
 https://www.hackerrank.com/
-### SPOJ Brasil (66 problemas resolvidos)
+
+### SPOJ Brasil (66 solved problems)
 https://br.spoj.com/
