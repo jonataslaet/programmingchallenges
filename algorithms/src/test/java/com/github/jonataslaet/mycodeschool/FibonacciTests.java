@@ -1,7 +1,5 @@
-package jonataslaet.mycodeschool;
+package com.github.jonataslaet.mycodeschool;
 
-import com.github.jonataslaet.mycodeschool.Fibonacci;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;

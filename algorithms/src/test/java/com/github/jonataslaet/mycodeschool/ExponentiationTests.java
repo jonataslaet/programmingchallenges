@@ -1,6 +1,5 @@
-package jonataslaet.mycodeschool;
+package com.github.jonataslaet.mycodeschool;
 
-import com.github.jonataslaet.mycodeschool.Exponentiation;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
