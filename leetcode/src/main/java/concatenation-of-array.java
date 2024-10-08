@@ -5,7 +5,7 @@ Memory Usage: 50 MB, less than 20.49% of Java online submissions for Concatenati
 Time Submitted: 02/18/2022 23:47
 */
 
-class Solution {
+class Solution202202182347 {
     public int[] getConcatenation(int[] nums) {
         int size = nums.length;
 		int[] ans = new int[2 * size];

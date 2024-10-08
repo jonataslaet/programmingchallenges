@@ -5,7 +5,10 @@ Memory Usage: 42.6 MB, less than 34.12% of Java online submissions for Running S
 Time Submitted: 02/20/2022 22:10
 */
 
-class Solution {
+import java.util.ArrayList;
+import java.util.List;
+
+class Solution202202202210 {
     public int[] buildArray(int[] nums) {
         List<Integer> arrayAns = new ArrayList<Integer>();
 		int r = nums.length;

@@ -5,7 +5,10 @@ Memory Usage: 54.2 MB, less than 7.26% of Java online submissions for Build Arra
 Time Submitted: 02/18/2022 23:22
 */
 
-class Solution {
+import java.util.ArrayList;
+import java.util.List;
+
+class Solution202202182322 {
     public int[] buildArray(int[] nums) {
         List<Integer> arrayAns = new ArrayList<Integer>();
 		int r = nums.length;

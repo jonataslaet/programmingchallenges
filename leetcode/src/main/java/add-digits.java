@@ -5,7 +5,7 @@ Memory Usage: 41.6 MB.
 Time Submitted: 02/10/2022 20:18
 */
 
-class Solution {
+class Solution202202102018 {
     public int addDigits(int num) {
         String stringNum = String.valueOf(num);
 		

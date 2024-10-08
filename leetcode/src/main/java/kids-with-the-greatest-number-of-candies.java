@@ -5,7 +5,13 @@ Memory Usage: 43.4 MB, less than 5.67% of Java online submissions for Kids With 
 Time Submitted: 02/25/2022 05:59
 */
 
-class Solution {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
+class Solution202202250559 {
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         List<Boolean> resultList = new ArrayList<Boolean>();
 		List<Integer> numsList = Arrays.stream(candies).boxed().collect(Collectors.toList());

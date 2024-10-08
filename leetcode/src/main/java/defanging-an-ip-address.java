@@ -1,11 +1,11 @@
 /*
-Description: https://leetcode.com/problems/final-value-of-variable-after-performing-operations/
-Runtime: 1 ms, faster than 90.30% of Java online submissions for Final Value of Variable After Performing Operations.
-Memory Usage: 41.9 MB, less than 32.31% of Java online submissions for Final Value of Variable After Performing Operations.
-Time Submitted: 02/20/2022 22:21
+Description: https://leetcode.com/problems/defanging-an-ip-address
+Runtime: 1 ms, faster than 50.29% of Java online submissions for Defanging an IP Address.
+Memory Usage: 42.1 MB, less than 15.77% of Java online submissions for Defanging an IP Address.
+Time Submitted: 02/20/2022 22:27
 */
 
-class Solution {
+class Solution202202202227 {
     public int finalValueAfterOperations(String[] operations) {
         int x = 0;
 		for (String operation : operations) {

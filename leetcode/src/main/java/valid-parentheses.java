@@ -5,7 +5,9 @@ Memory Usage: 41.9 MB, less than 59.09% of Java online submissions for Valid Par
 Time Submitted: 04/18/2022 08:56
 */
 
-class Solution {
+import java.util.Stack;
+
+class Solution202204180856 {
     public boolean isValid(String s) {
         String[] token = {"()","{}","[]"}; 
         Stack<Character> stack = new Stack<Character>();

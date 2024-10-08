@@ -5,7 +5,7 @@ Memory Usage: 42.6 MB, less than 6.09% of Java online submissions for Find the D
 Time Submitted: 02/07/2022 11:12
 */
 
-class Solution {
+class Solution202202071112 {
     public char findTheDifference(String s, String t) {
         int r = t.length() - 1;
         char currentCharInTheT;

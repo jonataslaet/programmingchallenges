@@ -5,7 +5,7 @@ Memory Usage: 42 MB, less than 9.08% of Java online submissions for Number of Go
 Time Submitted: 02/21/2022 21:13
 */
 
-class Solution {
+class Solution202202212113 {
     public int numIdenticalPairs(int[] nums) {
         int r = nums.length, sum = 0;
 		for (int i = 0; i < r; i++) {

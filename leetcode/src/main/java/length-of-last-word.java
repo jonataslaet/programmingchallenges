@@ -5,7 +5,7 @@ Memory Usage: 40.4 MB, less than 32.55% of Java online submissions for Length of
 Time Submitted: 02/17/2022 23:11	
 */
 
-class Solution {
+class Solution202202172311 {
     public int lengthOfLastWord(String s) {
 		String[] split = s.trim().split(" ");
         return  (split[split.length-1]).length();

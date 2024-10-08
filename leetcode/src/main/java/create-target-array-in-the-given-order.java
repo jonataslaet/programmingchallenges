@@ -5,7 +5,9 @@ Memory Usage: 42.7 MB, less than 13.14% of Java online submissions for Create Ta
 Time Submitted: 03/01/2022 11:52
 */
 
-class Solution {
+import java.util.LinkedList;
+
+class Solution202203011152 {
     public int[] createTargetArray(int[] nums, int[] index) {
         LinkedList<Integer> target = new LinkedList<Integer>();
         int i = 0;

@@ -5,7 +5,7 @@ Memory Usage: 43.6 MB, less than 12.72% of Java online submissions for Search In
 Time Submitted: 02/15/2022 20:35	
 */
 
-class Solution {
+class Solution202202152035 {
     public int searchInsert(int[] nums, int target) {
         int k = 0, p = 1;
 		for (int num : nums) {

@@ -5,7 +5,7 @@ Memory Usage: 44.1 MB, less than 19.99% of Java online submissions for Maximum N
 Time Submitted: 02/22/2022 23:00
 */
 
-class Solution {
+class Solution202202222300 {
     public int mostWordsFound(String[] sentences) {
         Long countMax = 0L, currentCount = 0L;
 

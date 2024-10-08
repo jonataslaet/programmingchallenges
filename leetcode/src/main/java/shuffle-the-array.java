@@ -5,7 +5,10 @@ Memory Usage: 46.5 MB, less than 5.21% of Java online submissions for Shuffle th
 Time Submitted: 02/21/2022 21:28
 */
 
-class Solution {
+import java.util.ArrayList;
+import java.util.List;
+
+class Solution202202212128 {
     public int[] shuffle(int[] nums, int n) {
         List<Integer> v = new ArrayList<Integer>();
 		for (int i = 0, k = n; i < n; i++) {

@@ -1,6 +1,8 @@
 //Fonte: https://leetcode.com/problems/richest-customer-wealth/
 
-class Solution {
+import java.util.Arrays;
+
+class Solution202201302225 {
     public int maximumWealth(int[][] accounts) {
         int maxSum = 0, currentSum = 0;
         int len = accounts.length;

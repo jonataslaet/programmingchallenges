@@ -5,7 +5,7 @@ Memory Usage: 39.2 MB, less than 44.24% of Java online submissions for Subtract 
 Time Submitted: 02/28/2022 21:31
 */
 
-class Solution {
+class Solution202202282131 {
     public int subtractProductAndSum(int n) {
         return product(n) - sum(n);
     }

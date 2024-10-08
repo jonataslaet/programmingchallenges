@@ -5,7 +5,9 @@ Memory Usage: 42.6 MB, less than 7.86% of Java online submissions for Plus One.
 Time Submitted: 02/07/2022 18:06
 */
 
-class Solution {
+import java.util.LinkedList;
+/*https://leetcode.com/problems/plus-one*/
+class Solution202202071806 {
     public int[] plusOne(int[] digits) {
         int r = digits.length - 1;
 		LinkedList<Integer> list = new LinkedList<Integer>();

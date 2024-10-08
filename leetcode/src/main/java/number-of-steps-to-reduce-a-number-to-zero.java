@@ -5,7 +5,7 @@ Memory Usage: 40.6 MB, less than 38.16% of Java online submissions for Number of
 Time Submitted: 02/28/2022 21:55
 */
 
-class Solution {
+class Solution202202282155 {
     public int numberOfSteps(int num) {
         int q = 0;
 		while(num > 0) {

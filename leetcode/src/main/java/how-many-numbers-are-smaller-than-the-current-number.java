@@ -5,7 +5,7 @@ Memory Usage: 44.5 MB, less than 27.03% of Java online submissions for How Many 
 Time Submitted: 02/27/2022 12:10
 */
 
-class Solution {
+class Solution202202271210 {
     public int[] smallerNumbersThanCurrent(int[] nums) {
         int size = nums.length;
 		int[] result = new int[size];

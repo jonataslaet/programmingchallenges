@@ -5,7 +5,10 @@ Memory Usage: 46.9 MB, less than 5.93% of Java online submissions for Two Sum.
 Time Submitted: 03/05/2022 00:31
 */
 
-class Solution {
+import java.util.HashMap;
+import java.util.Map;
+
+class Solution202203050031 {
     public int[] twoSum(int[] nums, int target) {
         int missing = target - nums[0];
 		Map<Integer, Integer> map = new HashMap<Integer, Integer>();

@@ -5,7 +5,7 @@ Memory Usage: 54.5 MB, less than 33.03% of Java online submissions for Binary Se
 Time Submitted: 04/19/2022 20:45
 */
 
-class Solution {
+class Solution202204192045 {
     
     public static int binarySearch(int[] nums, int begin, int end, int target) {
     	int i = (begin+end)/2;

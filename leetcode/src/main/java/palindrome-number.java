@@ -1,6 +1,6 @@
 //Fonte: https://leetcode.com/problems/palindrome-number/
 
-class Solution {
+class Solution202201302218 {
     public boolean isPalindrome(int x) {
         String xstring = String.valueOf(x);
         String reverseXString = reverse(xstring); 

@@ -5,7 +5,7 @@ Memory Usage: 45.1 MB, less than 16.77% of Java online submissions for Roman to 
 Time Submitted: 02/05/2022 12:11
 */
 
-class Solution {
+class Solution202202051211 {
     public int romanToInt(String s) {
         char[] in = s.toCharArray();
         
