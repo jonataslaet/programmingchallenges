@@ -2,26 +2,22 @@ package palindrome_number;
 
 //Fonte: https://leetcode.com/problems/palindrome-number/
 
+import java.util.LinkedList;
+
 class Solution {
-    public boolean isPalindrome(int x) {
-        String xstring = String.valueOf(x);
-        String reverseXString = reverse(xstring);
-
-        return xstring.equalsIgnoreCase(reverseXString);
-    }
-
-    public static String reverse(String input){
-        char[] in = input.toCharArray();
-        int begin=0;
-        int end=in.length-1;
-        char temp;
-        while(end>begin){
-            temp = in[begin];
-            in[begin]=in[end];
-            in[end] = temp;
-            end--;
-            begin++;
+    public static boolean isPalindrome(int x) {
+        if (x >= 0 && x < 10) return true;
+        if ((x < 10) || (x < 100 && (x % 10 != (x / 10)))) return false;
+        LinkedList<Integer> reversedList = new LinkedList<>();
+        int num = x;
+        while(num > 0) {
+            reversedList.addFirst(num % 10);
+            num /= 10;
         }
-        return new String(in);
+        for (Integer n: reversedList) {
+            if (n != (x % 10)) return false;
+            x /= 10;
+        }
+        return true;
     }
 }
