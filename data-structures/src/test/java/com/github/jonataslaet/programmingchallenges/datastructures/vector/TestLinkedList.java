@@ -14,7 +14,7 @@ public class TestLinkedList {
 		Node n1 = new Node(null, "Value Of Node 1");
 		Node n2 = new Node(null, "Value Of Node 2");
 
-		LinkedList<Node> linkedList = new LinkedList<Node>();
+		LinkedList linkedList = new LinkedList();
 		linkedList.add(n1);
 		linkedList.add(n2);
 
@@ -28,7 +28,7 @@ public class TestLinkedList {
 		Node n2 = new Node(null, "Value Of Node 2");
 		Node n3 = new Node(null, "Value Of Node 3");
 		
-		LinkedList<Node> linkedList = new LinkedList<Node>();
+		LinkedList linkedList = new LinkedList();
 		linkedList.add(n1);
 		
 		Assertions.assertTrue(linkedList.contains(n1));
@@ -48,7 +48,7 @@ public class TestLinkedList {
 		Node n1 = new Node(null, "Value Of Node 1");
 		Node n2 = new Node(null, "Value Of Node 2");
 
-		LinkedList<Node> linkedList = new LinkedList<Node>();
+		LinkedList linkedList = new LinkedList();
 		linkedList.addToTheBeginning(n1);
 		linkedList.addToTheBeginning(n2);
 
@@ -67,7 +67,7 @@ public class TestLinkedList {
 		Node n1 = new Node(null, "Value Of Node 1");
 		Node n2 = new Node(null, "Value Of Node 2");
 
-		LinkedList<Node> linkedList = new LinkedList<Node>();
+		LinkedList linkedList = new LinkedList();
 		linkedList.add(n1);
 		linkedList.add(n2);
 		
@@ -82,7 +82,7 @@ public class TestLinkedList {
 		Node n2 = new Node(null, "Value Of Node 2");
 		Node n3 = new Node(null, "Value Of Node 3");
 		
-		LinkedList<Node> linkedList = new LinkedList<Node>();
+		LinkedList linkedList = new LinkedList();
 		linkedList.add(n1);
 		linkedList.add(n2);
 
@@ -98,7 +98,7 @@ public class TestLinkedList {
 		Node n2 = new Node(null, "Value Of Node 2");
 		Node n3 = new Node(null, "Value Of Node 3");
 		
-		LinkedList<Node> linkedList = new LinkedList<Node>();
+		LinkedList linkedList = new LinkedList();
 		linkedList.add(n1);
 		linkedList.add(n2);
 		linkedList.add(n3);
@@ -121,7 +121,7 @@ public class TestLinkedList {
 		Node n1 = new Node(null, "Value Of Node 1");
 		Node n2 = new Node(null, "Value Of Node 2");
 		
-		LinkedList<Node> linkedList = new LinkedList<Node>();
+		LinkedList linkedList = new LinkedList();
 		linkedList.add(n1);
 		linkedList.add(n2);
 		
@@ -139,7 +139,7 @@ public class TestLinkedList {
 		Node n1 = new Node(null, "Value Of Node 1");
 		Node n2 = new Node(null, "Value Of Node 2");
 		
-		LinkedList<Node> linkedList = new LinkedList<Node>();
+		LinkedList linkedList = new LinkedList();
 		linkedList.add(n1);
 		linkedList.add(n2);
 		
@@ -155,7 +155,7 @@ public class TestLinkedList {
 		Node n1 = new Node(null, "Value Of Node 1");
 		Node n2 = new Node(null, "Value Of Node 2");
 
-		LinkedList<Node> linkedList = new LinkedList<Node>();
+		LinkedList linkedList = new LinkedList();
 		linkedList.addToTheBeginning(n1);
 		linkedList.addToTheBeginning(n2);
 

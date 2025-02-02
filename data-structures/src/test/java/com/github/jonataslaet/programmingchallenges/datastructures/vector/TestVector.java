@@ -11,65 +11,65 @@ public class TestVector {
 
 	@Test
 	void testAddNodeToTheEnd() {
-		Node n1 = new Node(null, "Value Of Node 1");
-		Node n2 = new Node(null, "Value Of Node 2");
+		Object object1 = "Value of object 1";
+		Object object2 = "Value of object 2";
 
-		Vector<Node> vector = new Vector<Node>();
-		vector.add(n1);
-		vector.add(n2);
+		Vector vector = new Vector();
+		vector.add(object1);
+		vector.add(object2);
 
-		Assertions.assertTrue(vector.get(0).getValue().equals(n1.getValue()));
-		Assertions.assertTrue(vector.get(1).getValue().equals(n2.getValue()));
+		Assertions.assertTrue(vector.get(0).equals(object1));
+		Assertions.assertTrue(vector.get(1).equals(object2));
 	}
 	
 	@Test
 	void testAddNodeToThePosition() {
-		Node n1 = new Node(null, "Value Of Node 1");
-		Node n2 = new Node(null, "Value Of Node 2");
-		Node n3 = new Node(null, "Value Of Node 3");
+		Object object1 = "Value of object 1";
+		Object object2 = "Value of object 2";
+		Object object3 = "Value of object 3";
 		
-		Vector<Node> vector = new Vector<Node>();
-		vector.add(n1);
+		Vector vector = new Vector();
+		vector.add(object1);
 		
-		Assertions.assertTrue(vector.contains(n1));
+		Assertions.assertTrue(vector.contains(object1));
 		
-		vector.add(0, n2);
-		vector.add(1, n3);
+		vector.add(0, object2);
+		vector.add(1, object3);
 		
-		Assertions.assertTrue(vector.contains(n1));
-		Assertions.assertEquals("Value Of Node 2", vector.get(0).getValue());
-		Assertions.assertEquals("Value Of Node 3", vector.get(1).getValue());
+		Assertions.assertTrue(vector.contains(object1));
+		Assertions.assertEquals("Value of object 2", vector.get(0));
+		Assertions.assertEquals("Value of object 3", vector.get(1));
 		
 	}
 	
 	@Test
-	void testGetNodeFromPosition() {
+	void testGetObjectFromPosition() {
 
-		Node n1 = new Node(null, "Value Of Node 1");
-		Node n2 = new Node(null, "Value Of Node 2");
+		Object object1 = "Value of object 1";
+		Object object2 = "Value of object 2";
 
-		Vector<Node> vector = new Vector<Node>();
-		vector.add(n1);
-		vector.add(n2);
+		Vector vector = new Vector();
+		vector.add(object1);
+		vector.add(object2);
 
-		Node getN1 = vector.get(0);
-		Node getN2 = vector.get(1);
+		Object getObject1 = vector.get(0);
+		Object getObject2 = vector.get(1);
 
-		Assertions.assertNotNull(getN1);
-		Assertions.assertNotNull(getN2);
-		Assertions.assertEquals("Value Of Node 1", getN1.getValue());
-		Assertions.assertEquals("Value Of Node 2", getN2.getValue());
+		Assertions.assertNotNull(getObject1);
+		Assertions.assertNotNull(getObject2);
+		Assertions.assertEquals("Value of object 1", getObject1);
+		Assertions.assertEquals("Value of object 2", getObject2);
 
 	}
 
 	@Test
 	void testGetSize() {
-		Node n1 = new Node(null, "Value Of Node 1");
-		Node n2 = new Node(null, "Value Of Node 2");
+		Object object1 = "Value of object 1";
+		Object object2 = "Value of object 2";
 
-		Vector<Node> vector = new Vector<Node>();
-		vector.add(n1);
-		vector.add(n2);
+		Vector vector = new Vector();
+		vector.add(object1);
+		vector.add(object2);
 		
 		int expectedSize = 2;
 		
@@ -78,33 +78,33 @@ public class TestVector {
 	
 	@Test
 	void testContainsNode() {
-		Node n1 = new Node(null, "Value Of Node 1");
-		Node n2 = new Node(null, "Value Of Node 2");
-		Node n3 = new Node(null, "Value Of Node 3");
+		Object object1 = "Value of object 1";
+		Object object2 = "Value of object 2";
+		Object object3 = "Value of object 3";
 		
-		Vector<Node> vector = new Vector<Node>();
-		vector.add(n1);
-		vector.add(n2);
+		Vector vector = new Vector();
+		vector.add(object1);
+		vector.add(object2);
 
-		Assertions.assertTrue(vector.contains(n1));
-		Assertions.assertTrue(vector.contains(n2));
-		Assertions.assertFalse(vector.contains(n3));
+		Assertions.assertTrue(vector.contains(object1));
+		Assertions.assertTrue(vector.contains(object2));
+		Assertions.assertFalse(vector.contains(object3));
 
 	}
 	
 	@Test
 	void testRemoveFromPosition() {
-		Node n1 = new Node(null, "Value Of Node 1");
-		Node n2 = new Node(null, "Value Of Node 2");
+		Object object1 = "Value of object 1";
+		Object object2 = "Value of object 2";
 		
-		Vector<Node> vector = new Vector<Node>();
-		vector.add(n1);
-		vector.add(n2);
+		Vector vector = new Vector();
+		vector.add(object1);
+		vector.add(object2);
 		
 		Assertions.assertTrue(vector.contains(vector.get(0)));
-		Assertions.assertEquals("Value Of Node 1", vector.get(0).getValue());
+		Assertions.assertEquals("Value of object 1", vector.get(0));
 		vector.remove(0);
 		Assertions.assertTrue(vector.contains(vector.get(0)));
-		Assertions.assertEquals("Value Of Node 2", vector.get(0).getValue());
+		Assertions.assertEquals("Value of object 2", vector.get(0));
 	}
 }
