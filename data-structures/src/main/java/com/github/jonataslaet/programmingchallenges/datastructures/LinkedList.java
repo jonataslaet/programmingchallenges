@@ -1,4 +1,4 @@
-package main.com.github.jonataslaet.programmingchallenges.datastructures;
+package com.github.jonataslaet.programmingchallenges.datastructures;
 
 @SuppressWarnings({ "unchecked", "unused" })
 public class LinkedList<T> implements Operations<T> {
