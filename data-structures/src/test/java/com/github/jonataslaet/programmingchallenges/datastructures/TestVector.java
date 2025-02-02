@@ -1,16 +1,13 @@
-package com.github.jonataslaet.programmingchallenges.datastructures.vector;
+package com.github.jonataslaet.programmingchallenges.datastructures;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import com.github.jonataslaet.programmingchallenges.datastructures.Node;
-import com.github.jonataslaet.programmingchallenges.datastructures.Vector;
 
 public class TestVector {
 
 
 	@Test
-	void testAddNodeToTheEnd() {
+	void testAddObjectToTheEnd() {
 		Object object1 = "Value of object 1";
 		Object object2 = "Value of object 2";
 
@@ -23,7 +20,7 @@ public class TestVector {
 	}
 	
 	@Test
-	void testAddNodeToThePosition() {
+	void testAddObjectToThePosition() {
 		Object object1 = "Value of object 1";
 		Object object2 = "Value of object 2";
 		Object object3 = "Value of object 3";
@@ -77,7 +74,7 @@ public class TestVector {
 	}
 	
 	@Test
-	void testContainsNode() {
+	void testContainsObject() {
 		Object object1 = "Value of object 1";
 		Object object2 = "Value of object 2";
 		Object object3 = "Value of object 3";

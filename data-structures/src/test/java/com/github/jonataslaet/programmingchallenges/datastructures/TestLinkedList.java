@@ -1,4 +1,4 @@
-package com.github.jonataslaet.programmingchallenges.datastructures.vector;
+package com.github.jonataslaet.programmingchallenges.datastructures;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
