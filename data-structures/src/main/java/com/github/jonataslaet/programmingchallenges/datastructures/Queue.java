@@ -16,7 +16,7 @@ public class Queue {
     }
 
     public void add(Object value) {
-        Node node = new Node(null, value);
+        Node node = new Node(value);
         if (Objects.nonNull(tail)) {
             tail.setNext(node);
         }

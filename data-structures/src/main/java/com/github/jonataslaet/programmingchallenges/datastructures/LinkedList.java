@@ -6,25 +6,27 @@ public class LinkedList {
 	private Node last;
 	private int size;
 
-	public void add(Node object) {
+	public void add(Object object) {
 		if (size == 0) {
 			this.addToTheBeginning(object);
 		} else {
-			Node node = new Node((this.last).getNext(), (object).getValue());
-			((Node) this.last).setNext(node);
+			Node node = new Node(object);
+			node.setNext((this.last).getNext());
+			this.last.setNext(node);
 			this.last = node;
 			size++;
 		}
 	}
 
-	public void add(int position, Node object) {
+	public void add(int position, Object object) {
 		if (position == 0)
 			this.addToTheBeginning(object);
 		else if (position == this.size)
 			this.add(object);
 		else {
 			Node previousNode = (Node) get(position-1);
-			Node newNode = new Node(previousNode.getNext(), ((Node)object).getValue());
+			Node newNode = new Node(object);
+			newNode.setNext(previousNode.getNext());
 			previousNode.setNext(newNode);
 		}
 		this.size++;
@@ -32,7 +34,7 @@ public class LinkedList {
 
 	public Node get(int position) {
 		validOccupiedPosition(position);
-		Node node = (Node) this.first;
+		Node node = this.first;
 		int i = 0;
 		while (i < position && node.getNext() != null) {
 			node = node.getNext();
@@ -45,16 +47,18 @@ public class LinkedList {
 		if (position == 0) removeFromTheBeginning();
 		else if (position == this.size - 1) removeFromTheEnding();
 		else {
-			Node previousNode = (Node) this.get(position-1);
+			Node previousNode = this.get(position-1);
 			previousNode.setNext(previousNode.getNext().getNext());		
 			this.size--;
 		}
 	}
 
-	public boolean contains(Node object) {
+	public boolean contains(Object object) {
 		Node currentNode = this.first;
 		while(currentNode != null) {
-			if (currentNode.getValue().equals(object.getValue())) return true;
+			String value = (String) currentNode.getValue();
+			String value1 = (String) object;
+			if (currentNode.getValue().equals(object)) return true;
 			currentNode = currentNode.getNext();
 		}
 		return false;
@@ -64,8 +68,9 @@ public class LinkedList {
 		return this.size;
 	}
 
-	public void addToTheBeginning(Node object) {
-		Node node = new Node(this.first, object.getValue());
+	public void addToTheBeginning(Object object) {
+		Node node = new Node(object);
+		node.setNext(this.first);
 		this.first = node;
 		if (this.size == 0) {
 			this.last = this.first;

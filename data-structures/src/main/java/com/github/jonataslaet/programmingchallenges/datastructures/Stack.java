@@ -9,7 +9,8 @@ public class Stack {
     }
 
     public void push(Object value) {
-        Node node = new Node(top, value);
+        Node node = new Node(value);
+        node.setNext(top);
         top = node;
     }
 
