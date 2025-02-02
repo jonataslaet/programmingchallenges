@@ -3,8 +3,8 @@ package com.github.jonataslaet.programmingchallenges.datastructures.vector;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import main.com.github.jonataslaet.programmingchallenges.datastructures.Node;
-import main.com.github.jonataslaet.programmingchallenges.datastructures.LinkedList;
+import com.github.jonataslaet.programmingchallenges.datastructures.Node;
+import com.github.jonataslaet.programmingchallenges.datastructures.LinkedList;
 
 public class TestLinkedList {
 

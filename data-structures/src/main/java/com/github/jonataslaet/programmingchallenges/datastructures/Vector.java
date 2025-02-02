@@ -1,4 +1,4 @@
-package main.com.github.jonataslaet.programmingchallenges.datastructures;
+package com.github.jonataslaet.programmingchallenges.datastructures;
 
 public class Vector<T> implements Operations<T> {
 	
