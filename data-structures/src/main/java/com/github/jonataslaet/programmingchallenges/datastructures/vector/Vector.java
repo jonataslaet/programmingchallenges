@@ -1,4 +1,4 @@
-package com.github.jonataslaet.programmingchallenges.datastructures;
+package com.github.jonataslaet.programmingchallenges.datastructures.vector;
 
 public class Vector {
 

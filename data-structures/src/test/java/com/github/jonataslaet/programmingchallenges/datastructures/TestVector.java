@@ -1,5 +1,6 @@
 package com.github.jonataslaet.programmingchallenges.datastructures;
 
+import com.github.jonataslaet.programmingchallenges.datastructures.vector.Vector;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -15,8 +16,8 @@ public class TestVector {
 		vector.add(object1);
 		vector.add(object2);
 
-		Assertions.assertTrue(vector.get(0).equals(object1));
-		Assertions.assertTrue(vector.get(1).equals(object2));
+        Assertions.assertEquals(vector.get(0), object1);
+        Assertions.assertEquals(vector.get(1), object2);
 	}
 	
 	@Test

@@ -1,5 +1,6 @@
 package com.github.jonataslaet.programmingchallenges.datastructures;
 
+import com.github.jonataslaet.programmingchallenges.datastructures.stack.Stack;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
