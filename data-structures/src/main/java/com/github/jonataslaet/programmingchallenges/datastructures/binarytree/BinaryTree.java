@@ -47,11 +47,11 @@ public class BinaryTree {
         System.out.println();
     }
 
-    private void showInOrder(Node root) {
-        if (root != null) {
-            showInOrder(root.getLeft());
-            System.out.print(root.getValue() + " ");
-            showInOrder(root.getRight());
+    private void showInOrder(Node node) {
+        if (node != null) {
+            showInOrder(node.getLeft());
+            System.out.print(node.getValue() + " ");
+            showInOrder(node.getRight());
         }
     }
 
