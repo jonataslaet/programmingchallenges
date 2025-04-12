@@ -89,7 +89,7 @@ public class Main {
         }
 
         System.out.println("\nPRINT BFS:");
-        myTree.showTreeBFS(); //TODO: Pendente de implementação
+        myTree.showTreeBFS();
 
         Node<String> pos5 = myTree.getFoundNode("Métodos");
         if (pos5 != null) {
