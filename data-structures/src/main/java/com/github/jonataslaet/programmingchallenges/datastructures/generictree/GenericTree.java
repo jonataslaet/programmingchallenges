@@ -1,6 +1,10 @@
 package com.github.jonataslaet.programmingchallenges.datastructures.generictree;
 
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Objects;
+import java.util.Queue;
+import java.util.LinkedList;
 
 public class GenericTree <T> {
     private Node<T> root;
