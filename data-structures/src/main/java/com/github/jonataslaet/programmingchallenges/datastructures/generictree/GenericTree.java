@@ -39,9 +39,9 @@ public class GenericTree <T> {
         return nodes;
     }
 
-    private void collectNodes(List<Node<T>> elements, Node<T> node) {
-        elements.add(node);
-        for (Node<T> child: node.getChildren()) {
+    private void collectNodes(List<Node<T>> elements, Node<T> currentNode) {
+        elements.add(currentNode);
+        for (Node<T> child: currentNode.getChildren()) {
             collectNodes(elements, child);
         }
     }
@@ -56,9 +56,9 @@ public class GenericTree <T> {
         return elements;
     }
 
-    private void collectElements(List<T> elements, Node<T> node) {
-        elements.add(node.getElement());
-        for (Node<T> child: node.getChildren()) {
+    private void collectElements(List<T> elements, Node<T> currentNode) {
+        elements.add(currentNode.getElement());
+        for (Node<T> child: currentNode.getChildren()) {
             collectElements(elements, child);
         }
     }
@@ -87,12 +87,12 @@ public class GenericTree <T> {
         showNode(this.root, 1);
     }
 
-    private void showNode(Node<T> node, Integer order) {
-        if (Objects.nonNull(node)) {
+    private void showNode(Node<T> currentNode, Integer order) {
+        if (Objects.nonNull(currentNode)) {
             String prefixo = "\t".repeat(order);
-            System.out.print(prefixo + node.getElement());
+            System.out.print(prefixo + currentNode.getElement());
             System.out.println();
-            for(Node<T> child: node.getChildren()) {
+            for(Node<T> child: currentNode.getChildren()) {
                 showNode(child, 1 + order);
             }
         }
@@ -126,16 +126,16 @@ public class GenericTree <T> {
         return pos1.isLeaf();
     }
 
-    public Boolean isRoot(Node<T> pos1) {
-        return Objects.nonNull(pos1) && Objects.isNull(pos1.getParent());
+    public Boolean isRoot(Node<T> node) {
+        return Objects.nonNull(node) && Objects.isNull(node.getParent());
     }
 
-    public Node<T> getParent(Node<T> pos1) {
-        return pos1.getParent();
+    public Node<T> getParent(Node<T> node) {
+        return node.getParent();
     }
 
-    public T getElement(Node<T> parent) {
-        return parent.getElement();
+    public T getElement(Node<T> node) {
+        return node.getElement();
     }
 
     public void replace(Node<T> node, T element) {
