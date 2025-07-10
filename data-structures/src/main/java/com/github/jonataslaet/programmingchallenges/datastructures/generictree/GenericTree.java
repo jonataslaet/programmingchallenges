@@ -22,7 +22,6 @@ public class GenericTree <T> {
         Node<T> node = new Node<>(element);
 
         if (Objects.isNull(parent)) {
-            node = new Node<>(element);
             this.root = node;
             this.size++;
             return node;
