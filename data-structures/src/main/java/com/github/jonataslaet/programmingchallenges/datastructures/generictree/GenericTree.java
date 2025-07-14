@@ -100,8 +100,7 @@ public class GenericTree <T> {
     }
 
     public Node<T> getFoundNode(T element) {
-        boolean isEmpty = this.isEmpty();
-        if (isEmpty) return null;
+        if (this.isEmpty()) return null;
         return getFoundNode(this.root, element);
     }
 
