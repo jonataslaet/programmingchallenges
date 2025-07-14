@@ -112,7 +112,10 @@ public class GenericTree <T> {
             return currentNode;
         }
         for (Node<T> child: currentNode.getChildren()) {
-            return getFoundNode(child, element);
+            Node<T> foundNode = getFoundNode(child, element);
+            if (Objects.equals(element, Objects.nonNull(foundNode) ? foundNode.getElement() : null)) {
+                return foundNode;
+            }
         }
         return null;
     }
