@@ -68,11 +68,14 @@ public class GenericTree <T> {
             this.root = null;
             this.size = 0;
         } else {
-            Node<T> parent = node.getParent();
-            if (Objects.nonNull(parent)) {
-                parent.removeChild(node);
+            Node<T> foundNode = getFoundNode(node, node.getElement());
+            if (Objects.nonNull(foundNode)) {
+                Node<T> parent = node.getParent();
+                if (Objects.nonNull(parent)) {
+                    parent.removeChild(node);
+                }
+                this.size -= subtreeSize(node);
             }
-            this.size -= subtreeSize(node);
         }
     }
 
@@ -136,8 +139,9 @@ public class GenericTree <T> {
     }
 
     public void replace(Node<T> node, T element) {
-        if (Objects.nonNull(node)) {
-            node.setElement(element);
+        Node<T> foundNode = getFoundNode(node, node.getElement());
+        if (Objects.nonNull(foundNode)) {
+            foundNode.setElement(element);
         }
     }
 
