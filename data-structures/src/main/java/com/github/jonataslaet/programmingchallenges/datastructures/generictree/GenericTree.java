@@ -82,6 +82,10 @@ public class GenericTree <T> {
         }
     }
 
+    private Integer subtreeSize(Node<T> node) {
+        return this.getElements(node).size();
+    }
+
     public void showTree() {
         showNode(this.root, 1);
     }
@@ -95,10 +99,6 @@ public class GenericTree <T> {
                 showNode(child, 1 + order);
             }
         }
-    }
-
-    private Integer subtreeSize(Node<T> node) {
-        return this.getElements(node).size();
     }
 
     public Node<T> getFoundNode(T element) {
