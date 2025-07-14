@@ -64,26 +64,24 @@ public class GenericTree <T> {
 
     public void remove(Node<T> node) {
         if (this.isEmpty()) throw new RuntimeException("This is tree is empty");
-        remove(this.root, node);
-    }
-
-    private void remove(Node<T> currentNode, Node<T> removedNode) {
-        if (Objects.deepEquals(removedNode, this.root)) {
-            this.size = 0;
+        if (Objects.deepEquals(node, this.root)) {
             this.root = null;
-        } else if (Objects.deepEquals(currentNode, removedNode)) {
-            Node<T> parent = removedNode.getParent();
-            parent.removeChild(removedNode);
-            this.size -= subtreeSize(parent);
-            return;
-        }
-        for (Node<T> child: currentNode.getChildren()) {
-            remove(child, removedNode);
+            this.size = 0;
+        } else {
+            Node<T> parent = node.getParent();
+            if (Objects.nonNull(parent)) {
+                parent.removeChild(node);
+            }
+            this.size -= subtreeSize(node);
         }
     }
 
-    private Integer subtreeSize(Node<T> node) {
-        return this.getElements(node).size();
+    private int subtreeSize(Node<T> node) {
+        int subtreeCount = 1;
+        for (Node<T> child : node.getChildren()) {
+            subtreeCount += subtreeSize(child);
+        }
+        return subtreeCount;
     }
 
     public void showTree() {
