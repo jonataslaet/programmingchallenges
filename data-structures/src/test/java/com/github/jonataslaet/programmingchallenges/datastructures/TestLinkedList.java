@@ -18,8 +18,8 @@ public class TestLinkedList {
 		linkedList.add(object1);
 		linkedList.add(object2);
 
-        Assertions.assertEquals(linkedList.get(0).getValue(), object1);
-        Assertions.assertEquals(linkedList.get(1).getValue(), object2);
+        Assertions.assertEquals(linkedList.getValue(0), object1);
+        Assertions.assertEquals(linkedList.getValue(1), object2);
 	}
 	
 	@Test
@@ -37,8 +37,8 @@ public class TestLinkedList {
 		linkedList.add(1, object3);
 		
 		Assertions.assertTrue(linkedList.contains(object1));
-		Assertions.assertEquals("Value Of Node 2", linkedList.get(0).getValue());
-		Assertions.assertEquals("Value Of Node 3", linkedList.get(1).getValue());
+		Assertions.assertEquals("Value Of Node 2", linkedList.getValue(0));
+		Assertions.assertEquals("Value Of Node 3", linkedList.getValue(1));
 		
 	}
 	
@@ -57,8 +57,8 @@ public class TestLinkedList {
 
 		Assertions.assertNotNull(nodeFromPosition0);
 		Assertions.assertNotNull(nodeFromPosition1);
-		Assertions.assertEquals(nodeFromPosition0.getValue(), object2);
-		Assertions.assertEquals(nodeFromPosition1.getValue(), object1);
+		Assertions.assertEquals(linkedList.getValue(0), object2);
+		Assertions.assertEquals(linkedList.getValue(1), object1);
 
 	}
 
@@ -70,9 +70,9 @@ public class TestLinkedList {
 		LinkedList<String> linkedList = new LinkedList<>();
 		linkedList.add(object1);
 		linkedList.add(object2);
-		
+
 		int expectedSize = 2;
-		
+
 		Assertions.assertEquals(expectedSize, linkedList.size());
 	}
 
@@ -90,13 +90,13 @@ public class TestLinkedList {
 		Assertions.assertFalse(linkedList.contains(object3));
 
 	}
-	
+
 	@Test
 	void testRemoveFromPosition() {
 		String object1 = "Value Of Node 1";
 		String object2 = "Value Of Node 2";
 		String object3 = "Value Of Node 3";
-		
+
 		LinkedList<String> linkedList = new LinkedList<>();
 		linkedList.add(object1);
 		linkedList.add(object2);
@@ -104,40 +104,40 @@ public class TestLinkedList {
 
         Assertions.assertEquals(3, linkedList.size());
 		Assertions.assertTrue(linkedList.contains(object2));
-		Assertions.assertEquals(object1, linkedList.get(0).getValue());
-		Assertions.assertEquals(object2, linkedList.get(1).getValue());
-		Assertions.assertEquals(object3, linkedList.get(2).getValue());
+		Assertions.assertEquals(object1, linkedList.getValue(0));
+		Assertions.assertEquals(object2, linkedList.getValue(1));
+		Assertions.assertEquals(object3, linkedList.getValue(2));
 		linkedList.remove(1);
         Assertions.assertEquals(2, linkedList.size());
 		Assertions.assertFalse(linkedList.contains(object2));
-		Assertions.assertEquals(object1, linkedList.get(0).getValue());
-		Assertions.assertNotEquals(object2, linkedList.get(1).getValue());
-		Assertions.assertEquals(object3, linkedList.get(1).getValue());
+		Assertions.assertEquals(object1, linkedList.getValue(0));
+		Assertions.assertNotEquals(object2, linkedList.getValue(1));
+		Assertions.assertEquals(object3, linkedList.getValue(1));
 	}
-	
+
 	@Test
 	void testRemoveFromBegining() {
 		String object1 = "Value Of Node 1";
 		String object2 = "Value Of Node 2";
-		
+
 		LinkedList<String> linkedList = new LinkedList<>();
 		linkedList.add(object1);
 		linkedList.add(object2);
 
         Assertions.assertEquals(2, linkedList.size());
-		Assertions.assertTrue(linkedList.contains(linkedList.get(0).getValue()));
-		Assertions.assertEquals("Value Of Node 1", linkedList.get(0).getValue());
+		Assertions.assertTrue(linkedList.contains(linkedList.getValue(0)));
+		Assertions.assertEquals("Value Of Node 1", linkedList.getValue(0));
 		linkedList.removeFromTheBeginning();
         Assertions.assertEquals(1, linkedList.size());
-		Assertions.assertTrue(linkedList.contains(linkedList.get(0).getValue()));
-		Assertions.assertEquals("Value Of Node 2", linkedList.get(0).getValue());
+		Assertions.assertTrue(linkedList.contains(linkedList.getValue(0)));
+		Assertions.assertEquals("Value Of Node 2", linkedList.getValue(0));
 	}
-	
+
 	@Test
 	void testRemoveFromTheEnding() {
 		String object1 = "Value Of Node 1";
 		String object2 = "Value Of Node 2";
-		
+
 		LinkedList<String> linkedList = new LinkedList<>();
 		linkedList.add(object1);
 		linkedList.add(object2);
@@ -148,7 +148,7 @@ public class TestLinkedList {
         Assertions.assertEquals(1, linkedList.size());
         Assertions.assertFalse(linkedList.contains(object2));
 	}
-	
+
 	@Test
 	void testAddNodeToTheBeginning() {
 		String object1 = "Value Of Node 1";
@@ -158,8 +158,8 @@ public class TestLinkedList {
 		linkedList.addToTheBeginning(object1);
 		linkedList.addToTheBeginning(object2);
 
-		String v1 = linkedList.get(0).getValue();
-		String v2 = linkedList.get(1).getValue();
+		String v1 = linkedList.getValue(0);
+		String v2 = linkedList.getValue(1);
 
         Assertions.assertEquals(v1, object2);
         Assertions.assertEquals(v2, object1);

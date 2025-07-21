@@ -25,11 +25,15 @@ public class LinkedList<T extends Comparable<T>> {
 			this.add(object);
 		else {
 			Node<T> previousNode = get(position-1);
-			Node newNode = new Node(object);
+			Node<T> newNode = new Node<>(object);
 			newNode.setNext(previousNode.getNext());
 			previousNode.setNext(newNode);
 		}
 		this.size++;
+	}
+
+	public T getValue(int position) {
+		return get(position).getValue();
 	}
 
 	public Node<T> get(int position) {
@@ -96,10 +100,6 @@ public class LinkedList<T extends Comparable<T>> {
 			this.last = beforeLast;
 			this.size--;
 		}
-	}
-
-	private boolean validPosition(int position) {
-		return position >= 0 && position <= this.size;
 	}
 
 	private void validOccupiedPosition(int position) {
