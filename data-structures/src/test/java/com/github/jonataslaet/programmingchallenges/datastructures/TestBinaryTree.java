@@ -11,13 +11,13 @@ public class TestBinaryTree {
 
     @Test
     void testTreeIsEmptyInitially() {
-        BinaryTree binaryTree = new BinaryTree();
+        BinaryTree<Integer> binaryTree = new BinaryTree<>();
         Assertions.assertFalse(binaryTree.contains(10));
     }
 
     @Test
     void testInsertElementsIntoTree() {
-        BinaryTree binaryTree = new BinaryTree();
+        BinaryTree<Integer> binaryTree = new BinaryTree<>();
         binaryTree.insert(50);
         binaryTree.insert(30);
         binaryTree.insert(70);
@@ -30,7 +30,7 @@ public class TestBinaryTree {
 
     @Test
     void testSearchExistingElements() {
-        BinaryTree binaryTree = new BinaryTree();
+        BinaryTree<Integer> binaryTree = new BinaryTree<>();
         binaryTree.insert(15);
         binaryTree.insert(10);
         binaryTree.insert(20);
@@ -42,7 +42,7 @@ public class TestBinaryTree {
 
     @Test
     void testSearchNonExistingElements() {
-        BinaryTree binaryTree = new BinaryTree();
+        BinaryTree<Integer> binaryTree = new BinaryTree<>();
         binaryTree.insert(8);
         binaryTree.insert(3);
         binaryTree.insert(10);
@@ -53,7 +53,7 @@ public class TestBinaryTree {
 
     @Test
     void testShowInOrder() {
-        BinaryTree binaryTree = new BinaryTree();
+        BinaryTree<Integer> binaryTree = new BinaryTree<>();
         binaryTree.insert(30);
         binaryTree.insert(20);
         binaryTree.insert(40);
@@ -70,7 +70,7 @@ public class TestBinaryTree {
 
     @Test
     void testShowPreOrder() {
-        BinaryTree binaryTree = new BinaryTree();
+        BinaryTree<Integer> binaryTree = new BinaryTree<>();
         binaryTree.insert(30);
         binaryTree.insert(20);
         binaryTree.insert(40);
@@ -87,7 +87,7 @@ public class TestBinaryTree {
 
     @Test
     void testShowPostOrder() {
-        BinaryTree binaryTree = new BinaryTree();
+        BinaryTree<Integer> binaryTree = new BinaryTree<>();
         binaryTree.insert(30);
         binaryTree.insert(20);
         binaryTree.insert(40);
@@ -105,7 +105,7 @@ public class TestBinaryTree {
     /**
      * Captura a saída do método de percurso da árvore binária.
      */
-    private String captureOutput(BinaryTree binaryTree, String orderType) {
+    private String captureOutput(BinaryTree<Integer> binaryTree, String orderType) {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         PrintStream originalOut = System.out;
         System.setOut(new PrintStream(outputStream));

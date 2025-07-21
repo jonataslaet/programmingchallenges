@@ -1,35 +1,35 @@
 package com.github.jonataslaet.programmingchallenges.datastructures.binarytree;
 
-public class Node {
-    private Integer value;
-    private Node left, right;
+public class Node<T> {
+    private T value;
+    private Node<T> left, right;
 
-    public Node(Integer value) {
+    public Node(T value) {
         this.value = value;
         left = right = null;
     }
 
-    public Integer getValue() {
+    public T getValue() {
         return value;
     }
 
-    public void setValue(Integer value) {
+    public void setValue(T value) {
         this.value = value;
     }
 
-    public Node getLeft() {
+    public Node<T> getLeft() {
         return left;
     }
 
-    public void setLeft(Node left) {
+    public void setLeft(Node<T> left) {
         this.left = left;
     }
 
-    public Node getRight() {
+    public Node<T> getRight() {
         return right;
     }
 
-    public void setRight(Node right) {
+    public void setRight(Node<T> right) {
         this.right = right;
     }
 }
