@@ -11,10 +11,10 @@ public class TestLinkedList {
 
 	@Test
 	void testAddNodeToTheEnd() {
-		Object object1 = "Value Of Node 1";
-		Object object2 = "Value Of Node 2";
+		String object1 = "Value Of Node 1";
+		String object2 = "Value Of Node 2";
 
-		LinkedList linkedList = new LinkedList();
+		LinkedList<String> linkedList = new LinkedList<>();
 		linkedList.add(object1);
 		linkedList.add(object2);
 
@@ -24,11 +24,11 @@ public class TestLinkedList {
 	
 	@Test
 	void testAddNodeToThePosition() {
-		Object object1 = "Value Of Node 1";
-		Object object2 = "Value Of Node 2";
-		Object object3 = "Value Of Node 3";
+		String object1 = "Value Of Node 1";
+		String object2 = "Value Of Node 2";
+		String object3 = "Value Of Node 3";
 		
-		LinkedList linkedList = new LinkedList();
+		LinkedList<String> linkedList = new LinkedList<>();
 		linkedList.add(object1);
 		
 		Assertions.assertTrue(linkedList.contains(object1));
@@ -45,15 +45,15 @@ public class TestLinkedList {
 	@Test
 	void testGetNodeFromPosition() {
 
-		Object object1 = "Value Of Node 1";
-		Object object2 = "Value Of Node 2";
+		String object1 = "Value Of Node 1";
+		String object2 = "Value Of Node 2";
 
-		LinkedList linkedList = new LinkedList();
+		LinkedList<String> linkedList = new LinkedList<>();
 		linkedList.addToTheBeginning(object1);
 		linkedList.addToTheBeginning(object2);
 
-		Node nodeFromPosition0 = linkedList.get(0);
-		Node nodeFromPosition1 = linkedList.get(1);
+		Node<String> nodeFromPosition0 = linkedList.get(0);
+		Node<String> nodeFromPosition1 = linkedList.get(1);
 
 		Assertions.assertNotNull(nodeFromPosition0);
 		Assertions.assertNotNull(nodeFromPosition1);
@@ -64,10 +64,10 @@ public class TestLinkedList {
 
 	@Test
 	void testGetSize() {
-		Object object1 = "Value Of Node 1";
-		Object object2 = "Value Of Node 2";
+		String object1 = "Value Of Node 1";
+		String object2 = "Value Of Node 2";
 
-		LinkedList linkedList = new LinkedList();
+		LinkedList<String> linkedList = new LinkedList<>();
 		linkedList.add(object1);
 		linkedList.add(object2);
 		
@@ -78,10 +78,10 @@ public class TestLinkedList {
 
 	@Test
 	void testContainsNode() {
-		Object object1 = "Value Of Node 1";
-		Object object2 = "Value Of Node 2";
-		Object object3 = "Value Of Node 3";
-		LinkedList linkedList = new LinkedList();
+		String object1 = "Value Of Node 1";
+		String object2 = "Value Of Node 2";
+		String object3 = "Value Of Node 3";
+		LinkedList<String> linkedList = new LinkedList<>();
 		linkedList.add(object1);
 		linkedList.add(object2);
 
@@ -93,11 +93,11 @@ public class TestLinkedList {
 	
 	@Test
 	void testRemoveFromPosition() {
-		Object object1 = "Value Of Node 1";
-		Object object2 = "Value Of Node 2";
-		Object object3 = "Value Of Node 3";
+		String object1 = "Value Of Node 1";
+		String object2 = "Value Of Node 2";
+		String object3 = "Value Of Node 3";
 		
-		LinkedList linkedList = new LinkedList();
+		LinkedList<String> linkedList = new LinkedList<>();
 		linkedList.add(object1);
 		linkedList.add(object2);
 		linkedList.add(object3);
@@ -117,10 +117,10 @@ public class TestLinkedList {
 	
 	@Test
 	void testRemoveFromBegining() {
-		Object object1 = "Value Of Node 1";
-		Object object2 = "Value Of Node 2";
+		String object1 = "Value Of Node 1";
+		String object2 = "Value Of Node 2";
 		
-		LinkedList linkedList = new LinkedList();
+		LinkedList<String> linkedList = new LinkedList<>();
 		linkedList.add(object1);
 		linkedList.add(object2);
 
@@ -135,10 +135,10 @@ public class TestLinkedList {
 	
 	@Test
 	void testRemoveFromTheEnding() {
-		Object object1 = "Value Of Node 1";
-		Object object2 = "Value Of Node 2";
+		String object1 = "Value Of Node 1";
+		String object2 = "Value Of Node 2";
 		
-		LinkedList linkedList = new LinkedList();
+		LinkedList<String> linkedList = new LinkedList<>();
 		linkedList.add(object1);
 		linkedList.add(object2);
 
@@ -151,15 +151,15 @@ public class TestLinkedList {
 	
 	@Test
 	void testAddNodeToTheBeginning() {
-		Object object1 = "Value Of Node 1";
-		Object object2 = "Value Of Node 2";
+		String object1 = "Value Of Node 1";
+		String object2 = "Value Of Node 2";
 
-		LinkedList linkedList = new LinkedList();
+		LinkedList<String> linkedList = new LinkedList<>();
 		linkedList.addToTheBeginning(object1);
 		linkedList.addToTheBeginning(object2);
 
-		Object v1 = linkedList.get(0).getValue();
-		Object v2 = linkedList.get(1).getValue();
+		String v1 = linkedList.get(0).getValue();
+		String v2 = linkedList.get(1).getValue();
 
         Assertions.assertEquals(v1, object2);
         Assertions.assertEquals(v2, object1);
