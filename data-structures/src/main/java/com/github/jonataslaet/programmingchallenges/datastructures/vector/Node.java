@@ -1,12 +1,11 @@
-package com.github.jonataslaet.programmingchallenges.datastructures;
+package com.github.jonataslaet.programmingchallenges.datastructures.vector;
 
 public class Node {
 	
 	private Node next;
 	private Object value;
 	
-	public Node(Node next, Object value) {
-		this.next = next;
+	public Node(Object value) {
 		this.value = value;
 	}
 

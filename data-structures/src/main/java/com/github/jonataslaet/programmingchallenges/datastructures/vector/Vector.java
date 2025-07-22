@@ -1,32 +1,31 @@
-package com.github.jonataslaet.programmingchallenges.datastructures;
+package com.github.jonataslaet.programmingchallenges.datastructures.vector;
 
-public class Vector<T> implements Operations<T> {
-	
-	@SuppressWarnings("unchecked")
-	private T[] objects = (T[]) new Object[100];
-	private int quantityOfObjects;
+public class Vector {
 
-	public void add(T object) {
+	private Object[] objects = new Object[100];
+	private int length;
+
+	public void add(Object object) {
 		// Add a certain node at the end of the list
 		this.guaranteeSpace();
-		this.objects[this.quantityOfObjects++] = object;
+		this.objects[this.length++] = object;
 	}
 
-	public void add(int position, T object) {
+	public void add(int position, Object object) {
 		// Add a certain node at the position of the list
 		this.guaranteeSpace();
 		if (!validPosition(position)) {
 			throw new IllegalArgumentException("Invalid position");
 		}
-		for (int i = this.quantityOfObjects; i > position; i--) {
+		for (int i = this.length; i > position; i--) {
 			objects[i] = objects[i-1];
 		}
 		this.objects[position] = object;
-		this.quantityOfObjects++;
+		this.length++;
 		
 	}
 
-	public T get(int position) {
+	public Object get(int position) {
 		// Get a certain object from a certain position of the list
 		validOccupiedPosition(position);
 		return this.objects[position];
@@ -36,16 +35,16 @@ public class Vector<T> implements Operations<T> {
 		// Remove a certain node from a certain position of the list
 		validOccupiedPosition(position);
 		this.objects[position] = null;
-		int idTheLast = this.quantityOfObjects - 1;
+		int idTheLast = this.length - 1;
 		for (int i = position; i < idTheLast; i++) {
 			this.objects[i] = this.objects[i+1];
 		}
-		this.quantityOfObjects--;
+		this.length--;
 	}
 
-	public boolean contains(T object) {
+	public boolean contains(Object object) {
 		// Verify if a certain node is in the list
-		for (int i = 0; i < this.quantityOfObjects; i++) {
+		for (int i = 0; i < this.length; i++) {
 			if (object.equals(objects[i])) {
 				return true;
 			}
@@ -55,15 +54,15 @@ public class Vector<T> implements Operations<T> {
 
 	public int size() {
 		// Get the quantity of nodes in the list
-		return this.quantityOfObjects;
+		return this.length;
 	}
 	
 	private boolean occupiedPosition(int position) {
-		return position >= 0 && position < this.quantityOfObjects;
+		return position >= 0 && position < this.length;
 	}
 	
 	private boolean validPosition(int position) {
-		return position >= 0 && position <= this.quantityOfObjects;
+		return position >= 0 && position <= this.length;
 	}
 	
 	private void validOccupiedPosition(int position) {
@@ -74,18 +73,18 @@ public class Vector<T> implements Operations<T> {
 	
 	@SuppressWarnings("unchecked")
 	private void guaranteeSpace() {
-		if (this.quantityOfObjects == this.objects.length) {
-			T[] newObjects = (T[]) new Object[2 * this.quantityOfObjects];
+		if (this.length == this.objects.length) {
+			Object[] newObjects = new Object[2 * this.length];
 			System.arraycopy(this.objects, 0, newObjects, 0, newObjects.length);
 			this.objects = newObjects;
 		}
 	}
 	
 	public String toString() {
-		if (this.quantityOfObjects == 0) {
+		if (this.length == 0) {
 			return "[]";
 		}
-		int idTheLast = this.quantityOfObjects - 1;
+		int idTheLast = this.length - 1;
 		
 		StringBuilder builder = new StringBuilder();
 		builder.append("[");
