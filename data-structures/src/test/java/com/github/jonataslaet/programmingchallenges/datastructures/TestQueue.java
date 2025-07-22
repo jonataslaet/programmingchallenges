@@ -8,13 +8,13 @@ public class TestQueue {
 
     @Test
     void testQueueIsEmptyInitially() {
-        Queue queue = new Queue();
+        Queue<String> queue = new Queue<>();
         Assertions.assertTrue(queue.isEmpty());
     }
 
     @Test
     void testAddElementsToQueue() {
-        Queue queue = new Queue();
+        Queue<String> queue = new Queue<>();
         queue.add("First Element");
         queue.add("Second Element");
 
@@ -24,7 +24,7 @@ public class TestQueue {
 
     @Test
     void testPeekElement() {
-        Queue queue = new Queue();
+        Queue<String> queue = new Queue<>();
         queue.add("First Element");
         queue.add("Second Element");
 
@@ -33,7 +33,7 @@ public class TestQueue {
 
     @Test
     void testRemoveElementsFromQueue() {
-        Queue queue = new Queue();
+        Queue<String> queue = new Queue<>();
         queue.add("First Element");
         queue.add("Second Element");
 
@@ -47,7 +47,7 @@ public class TestQueue {
 
     @Test
     void testRemoveSingleElementFromQueue() {
-        Queue queue = new Queue();
+        Queue<String> queue = new Queue<>();
         queue.add("Only Element");
 
         Assertions.assertEquals("Only Element", queue.remove());

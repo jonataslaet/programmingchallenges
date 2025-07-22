@@ -1,45 +1,46 @@
 package com.github.jonataslaet.programmingchallenges.datastructures.binarytree;
 
-public class BinaryTree {
-    private Node root;
+public class BinaryTree<T extends Comparable<T>> {
+    private Node<T> root;
 
     public BinaryTree() {
         root = null;
     }
 
-    public void insert(Integer value) {
+    public void insert(T value) {
         root = getInsertedNode(root, value);
     }
 
-    private Node getInsertedNode(Node node, Integer value) {
+    private Node<T> getInsertedNode(Node<T> node, T value) {
         if (node == null) {
-            node = new Node(value);
+            node = new Node<>(value);
             return node;
         }
 
-        if (value < node.getValue()) {
+        if (value.compareTo(node.getValue()) < 0) {
             node.setLeft(getInsertedNode(node.getLeft(), value));
-        } else if (value > node.getValue()) {
+        } else if (value.compareTo(node.getValue()) > 0) {
             node.setRight(getInsertedNode(node.getRight(), value));
         }
 
         return node;
     }
 
-    public boolean contains(int value) {
+    public boolean contains(T value) {
         return contains(root, value);
     }
 
-    private boolean contains(Node root, int value) {
-        if (root == null) {
+    private boolean contains(Node<T> currentNode, T value) {
+        if (currentNode == null) {
             return false;
         }
 
-        if (root.getValue() == value) {
+        if (currentNode.getValue().compareTo(value) == 0) {
             return true;
         }
 
-        return value < root.getValue() ? contains(root.getLeft(), value) : contains(root.getRight(), value);
+        return value.compareTo(currentNode.getValue()) < 0 ?
+            contains(currentNode.getLeft(), value) : contains(currentNode.getRight(), value);
     }
 
     public void showInOrder() {
@@ -47,7 +48,7 @@ public class BinaryTree {
         System.out.println();
     }
 
-    private void showInOrder(Node node) {
+    private void showInOrder(Node<T> node) {
         if (node != null) {
             showInOrder(node.getLeft());
             System.out.print(node.getValue() + " ");
@@ -60,7 +61,7 @@ public class BinaryTree {
         System.out.println();
     }
 
-    private void showPreOrder(Node root) {
+    private void showPreOrder(Node<T> root) {
         if (root != null) {
             System.out.print(root.getValue() + " ");
             showPreOrder(root.getLeft());
@@ -73,7 +74,7 @@ public class BinaryTree {
         System.out.println();
     }
 
-    private void showPostOrder(Node root) {
+    private void showPostOrder(Node<T> root) {
         if (root != null) {
             showPostOrder(root.getLeft());
             showPostOrder(root.getRight());
@@ -83,7 +84,7 @@ public class BinaryTree {
 
     // Método principal para testar a árvore
     public static void main(String[] args) {
-        BinaryTree binaryTree = new BinaryTree();
+        BinaryTree<Integer> binaryTree = new BinaryTree<>();
 
         binaryTree.insert(50);
         binaryTree.insert(30);
