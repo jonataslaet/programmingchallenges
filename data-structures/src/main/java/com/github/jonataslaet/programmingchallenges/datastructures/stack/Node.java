@@ -1,27 +1,27 @@
 package com.github.jonataslaet.programmingchallenges.datastructures.stack;
 
-public class Node {
+public class Node<T> {
 	
-	private Node next;
-	private Object value;
+	private Node<T> next;
+	private T value;
 	
-	public Node(Object value) {
+	public Node(T value) {
 		this.value = value;
 	}
 
-	public Node getNext() {
+	public Node<T> getNext() {
 		return next;
 	}
 
-	public void setNext(Node next) {
+	public void setNext(Node<T> next) {
 		this.next = next;
 	}
 
-	public Object getValue() {
+	public T getValue() {
 		return value;
 	}
 
-	public void setValue(Object value) {
+	public void setValue(T value) {
 		this.value = value;
 	}
 	

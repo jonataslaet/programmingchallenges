@@ -1,18 +1,21 @@
 package com.github.jonataslaet.programmingchallenges.datastructures.vector;
 
-public class Vector {
+public class Vector<T extends Comparable<T>> {
 
-	private Object[] objects = new Object[100];
+	private T[] objects;
 	private int length;
 
-	public void add(Object object) {
-		// Add a certain node at the end of the list
+	@SuppressWarnings("unchecked")
+	public Vector() {
+		this.objects = (T[]) (new Comparable[100]);
+	}
+
+	public void add(T object) {
 		this.guaranteeSpace();
 		this.objects[this.length++] = object;
 	}
 
-	public void add(int position, Object object) {
-		// Add a certain node at the position of the list
+	public void add(int position, T object) {
 		this.guaranteeSpace();
 		if (!validPosition(position)) {
 			throw new IllegalArgumentException("Invalid position");
@@ -22,17 +25,14 @@ public class Vector {
 		}
 		this.objects[position] = object;
 		this.length++;
-		
 	}
 
-	public Object get(int position) {
-		// Get a certain object from a certain position of the list
+	public T get(int position) {
 		validOccupiedPosition(position);
 		return this.objects[position];
 	}
 
 	public void remove(int position) {
-		// Remove a certain node from a certain position of the list
 		validOccupiedPosition(position);
 		this.objects[position] = null;
 		int idTheLast = this.length - 1;
@@ -42,10 +42,9 @@ public class Vector {
 		this.length--;
 	}
 
-	public boolean contains(Object object) {
-		// Verify if a certain node is in the list
+	public boolean contains(T object) {
 		for (int i = 0; i < this.length; i++) {
-			if (object.equals(objects[i])) {
+			if (object.compareTo(objects[i]) == 0) {
 				return true;
 			}
 		}
@@ -53,7 +52,6 @@ public class Vector {
 	}
 
 	public int size() {
-		// Get the quantity of nodes in the list
 		return this.length;
 	}
 	
@@ -74,7 +72,7 @@ public class Vector {
 	@SuppressWarnings("unchecked")
 	private void guaranteeSpace() {
 		if (this.length == this.objects.length) {
-			Object[] newObjects = new Object[2 * this.length];
+			T[] newObjects = (T[]) new Object[2 * this.length];
 			System.arraycopy(this.objects, 0, newObjects, 0, newObjects.length);
 			this.objects = newObjects;
 		}

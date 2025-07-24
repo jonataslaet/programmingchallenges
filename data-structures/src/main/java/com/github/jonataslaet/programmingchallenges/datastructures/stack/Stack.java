@@ -1,21 +1,21 @@
 package com.github.jonataslaet.programmingchallenges.datastructures.stack;
 
-public class Stack {
+public class Stack<T> {
 
-    private Node top;
+    private Node<T> top;
 
     public boolean isEmpty() {
         return top == null;
     }
 
-    public void push(Object value) {
-        Node node = new Node(value);
+    public void push(T value) {
+        Node<T> node = new Node<>(value);
         node.setNext(top);
         top = node;
     }
 
-    public Object pop() {
-        Object removedValue = top.getValue();
+    public T pop() {
+        T removedValue = top.getValue();
         top = top.getNext();
         return removedValue;
     }

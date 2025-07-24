@@ -8,13 +8,13 @@ public class TestStack {
 
     @Test
     void testStackIsEmptyInitially() {
-        Stack stack = new Stack();
+        Stack<String> stack = new Stack<>();
         Assertions.assertTrue(stack.isEmpty());
     }
 
     @Test
     void testPushElementsToStack() {
-        Stack stack = new Stack();
+        Stack<String> stack = new Stack<>();
         stack.push("First Element");
         stack.push("Second Element");
 
@@ -24,7 +24,7 @@ public class TestStack {
 
     @Test
     void testPeekElement() {
-        Stack stack = new Stack();
+        Stack<String> stack = new Stack<>();
         stack.push("First Element");
         stack.push("Second Element");
 
@@ -33,7 +33,7 @@ public class TestStack {
 
     @Test
     void testPopElementsFromStack() {
-        Stack stack = new Stack();
+        Stack<String> stack = new Stack<>();
         stack.push("First Element");
         stack.push("Second Element");
 
@@ -47,7 +47,7 @@ public class TestStack {
 
     @Test
     void testPopSingleElementFromStack() {
-        Stack stack = new Stack();
+        Stack<String> stack = new Stack<>();
         stack.push("Only Element");
 
         Assertions.assertEquals("Only Element", stack.pop());
