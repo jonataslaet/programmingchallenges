@@ -9,10 +9,10 @@ public class TestVector {
 
 	@Test
 	void testAddObjectToTheEnd() {
-		Object object1 = "Value of object 1";
-		Object object2 = "Value of object 2";
+		String object1 = "Value of object 1";
+		String object2 = "Value of object 2";
 
-		Vector vector = new Vector();
+		Vector<String> vector = new Vector<>();
 		vector.add(object1);
 		vector.add(object2);
 
@@ -22,11 +22,11 @@ public class TestVector {
 	
 	@Test
 	void testAddObjectToThePosition() {
-		Object object1 = "Value of object 1";
-		Object object2 = "Value of object 2";
-		Object object3 = "Value of object 3";
+		String object1 = "Value of object 1";
+		String object2 = "Value of object 2";
+		String object3 = "Value of object 3";
 		
-		Vector vector = new Vector();
+		Vector<String> vector = new Vector<>();
 		vector.add(object1);
 		
 		Assertions.assertTrue(vector.contains(object1));
@@ -43,10 +43,10 @@ public class TestVector {
 	@Test
 	void testGetObjectFromPosition() {
 
-		Object object1 = "Value of object 1";
-		Object object2 = "Value of object 2";
+		String object1 = "Value of object 1";
+		String object2 = "Value of object 2";
 
-		Vector vector = new Vector();
+		Vector<String> vector = new Vector<>();
 		vector.add(object1);
 		vector.add(object2);
 
@@ -62,10 +62,10 @@ public class TestVector {
 
 	@Test
 	void testGetSize() {
-		Object object1 = "Value of object 1";
-		Object object2 = "Value of object 2";
+		String object1 = "Value of object 1";
+		String object2 = "Value of object 2";
 
-		Vector vector = new Vector();
+		Vector<String> vector = new Vector<>();
 		vector.add(object1);
 		vector.add(object2);
 		
@@ -76,11 +76,11 @@ public class TestVector {
 	
 	@Test
 	void testContainsObject() {
-		Object object1 = "Value of object 1";
-		Object object2 = "Value of object 2";
-		Object object3 = "Value of object 3";
+		String object1 = "Value of object 1";
+		String object2 = "Value of object 2";
+		String object3 = "Value of object 3";
 		
-		Vector vector = new Vector();
+		Vector<String> vector = new Vector<>();
 		vector.add(object1);
 		vector.add(object2);
 
@@ -92,10 +92,10 @@ public class TestVector {
 	
 	@Test
 	void testRemoveFromPosition() {
-		Object object1 = "Value of object 1";
-		Object object2 = "Value of object 2";
+		String object1 = "Value of object 1";
+		String object2 = "Value of object 2";
 		
-		Vector vector = new Vector();
+		Vector<String> vector = new Vector<>();
 		vector.add(object1);
 		vector.add(object2);
 		
