@@ -23,19 +23,6 @@ public class Solution1221 {
 
     }
 
-    private static boolean isPrime(int x) {
-        int q = 1, d = 0;
-        double r = Math.floor(Math.sqrt(x));
-        while (q <= r) {
-            if (x % q == 0) {
-                d++;
-                if (d > 1) return false;
-            }
-            q = q + 1;
-        }
-        return true;
-    }
-
     // n is not prime if it can be written as the product of two natural numbers which are greater than one and obsviously less than n
     // 1 < d < n
     // (a * d) == n
@@ -45,9 +32,8 @@ public class Solution1221 {
     // a <= (n / a)
     // a² <= n
     // a <= sqrt(n) E a >= 2
-    private static boolean isPrime2(int n) {
+    private static boolean isPrime(int n) {
         if (n < 2) return false;
-        double r = Math.floor(Math.sqrt(n));
         int sqrtN = (int) Math.sqrt(n);
         for (int i = 2; i <= sqrtN; i++) {
             if (n % i == 0) return false;
